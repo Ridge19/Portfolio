@@ -8,8 +8,7 @@
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: black;
 }
 
 /* Container */
@@ -23,6 +22,7 @@ body {
 .header {
   text-align: center;
   margin-bottom: 3rem;
+  color: white;
 }
 
 .header h1 {
@@ -32,7 +32,7 @@ body {
 
 .header p {
   font-size: 1.2rem;
-  color: #555;
+  color: white;
 }
 
 /* Sections */
@@ -43,13 +43,13 @@ main section {
 section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #222;
+  color: white;
 }
 
 section p,
 section ul {
   font-size: 1rem;
-  color: #555;
+  color: #00BFFF;
 }
 
 ul {
@@ -69,6 +69,7 @@ ul li {
 .project h3 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 .project a {
@@ -96,6 +97,5 @@ ul li {
   text-align: center;
   font-size: 0.9rem;
   padding: 1rem 0;
-  border-top: 1px solid #ddd;
-  color: #777;
+  color: white;
 }
