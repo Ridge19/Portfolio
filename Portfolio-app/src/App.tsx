@@ -2,13 +2,13 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="app-container">
       <header className="header">
         <h1>Ridge Tagala's Portfolio</h1>
-        <p>Welcome to my personal portfolio! I am a Web Developer and React enthusiast.</p>
+        <p>Welcome to my personal portfolio! I am a Web Developer and React enthusiast.<br>
+        </br>
+        -- STILL A WORK IN PROGRESS --</p>
       </header>
 
       <section className="about">
