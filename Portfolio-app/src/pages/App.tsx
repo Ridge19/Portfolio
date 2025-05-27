@@ -11,6 +11,8 @@ function App() {
       <main>
         <section className="about">
           <h2>About Me</h2>
+          <p>currently a work in progress...</p>
+          <p>coming soon.. :)</p>
           <p>I build responsive websites and web apps using React, TypeScript, and modern technologies.</p>
         </section>
 
