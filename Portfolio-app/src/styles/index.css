@@ -141,6 +141,66 @@ ul li:before {
   text-decoration: underline;
 }
 
+/* New Projects Section Styles */
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 1.2rem 1rem 1rem 1rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+  display: flex;
+  flex-direction: column;
+  min-height: 120px;
+}
+
+.project-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+}
+
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+}
+
+.project-title:hover {
+  text-decoration: underline;
+}
+
+.project-desc {
+  color: #444;
+  font-size: 0.98rem;
+  margin: 0.3rem 0 0.7rem 0;
+  flex: 1;
+}
+
+.project-meta {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 0.92rem;
+  color: #888;
+  margin-top: auto;
+}
+
+.project-lang {
+  font-weight: 500;
+}
+
+.project-stars {
+  color: #fbbf24;
+  font-weight: 500;
+}
+
 /* Contact Links */
 .contact ul li a {
   color: #00bfff;
