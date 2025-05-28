@@ -36,9 +36,8 @@ function App() {
   return (
     <div className="app-container">
       <Header />
-
       <main>
-        <section className="about">
+        <section id="home" className="about">
           <h2>About Me</h2>
           <p>currently a work in progress...</p>
           <p>coming soon.. :)</p>
@@ -48,7 +47,17 @@ function App() {
           </p>
         </section>
 
-        <section className="skills">
+        <section id="about" className="about">
+          <h2>About Me</h2>
+          <p>currently a work in progress...</p>
+          <p>coming soon.. :)</p>
+          <p>
+            I build responsive websites and web apps using React, TypeScript,
+            and modern technologies.
+          </p>
+        </section>
+
+        <section id="skills" className="skills">
           <h2>Skills</h2>
           <ul>
             <li>React & Redux</li>
@@ -59,7 +68,7 @@ function App() {
           </ul>
         </section>
 
-        <section className="projects">
+        <section id="projects" className="projects">
           <h2>Projects</h2>
           {loading && <p>Loading repositories...</p>}
           {error && <p style={{ color: "red" }}>Error: {error}</p>}
@@ -89,7 +98,7 @@ function App() {
             </div>
           )}
         </section>
-        <section className="resume">
+        <section id="resume" className="resume">
           <h2>Resume</h2>
           <p>You can view or download my resume below:</p>
           <div className="resume-actions">
@@ -107,7 +116,7 @@ function App() {
           </div>
         </section>
 
-        <section className="work-experience">
+        <section id="work-experience" className="work-experience">
           <h2>Work Experience</h2>
           <div className="timeline">
             <div className="timeline-item">
@@ -118,7 +127,13 @@ function App() {
                   Lifestyle Markets Australia
                 </span>
                 <span className="timeline-date">March 2025 – Present</span>
-                <p>Short description of your role and achievements.</p><br />
+                <p>
+                  • Supported management across 100+ daily operational tasks, enhancing team efficiency by 25%.<br />
+                  • Directed automation of internal office systems, reducing manual data entry time by 40%.<br />
+                  • Supervised 5 junior staff members, improving onboarding time by 30%.<br />
+                  • Maintained administrative records with 98% accuracy, enabling reliable performance tracking.<br />
+                  • Improved internal communication workflows, decreasing email response time by 20%.<br />
+                </p>
                 <div className="timeline-item">
                   <div className="timeline-dot" />
                   <div className="timeline-content">
@@ -127,7 +142,16 @@ function App() {
                       Lifestyle Markets Australia
                     </span>
                     <span className="timeline-date">November 2024</span>
-                    <p>Short description of your role and achievements.</p>
+                    <p>
+                    • Resolved 150+ technical support tickets per month with an average resolution time of under 2 hours.<br />
+                    • Achieved 98% end-user satisfaction in post-resolution surveys.<br />
+                    • Reduced recurring IT issues by 35% through documentation and root cause analysis.<br />
+                    • Contributed to a 20% reduction in hardware downtime by implementing preventive maintenance schedules.<br />
+                    • Onboarded and configured 30+ new employee workstations, ensuring readiness from day one.<br />
+                    • Deployed software updates and patches across 50+ systems with zero critical disruptions.<br />
+                    • Documented 20+ knowledge base articles to improve internal troubleshooting efficiency.<br />
+                    • Assisted in the migration of company data to cloud-based solutions, improving accessibility and backup integrity.
+                  </p>
                   </div>
                 </div>
               </div>
@@ -212,11 +236,65 @@ function App() {
           </div>
         </section>
 
-        <section className="contact">
+        <section id="education-certification" className="education-certification">
+          <h2>Education & Certifications</h2>
+          <div className="education-list">
+            <div className="education-item">
+              <h3>Associates Degree of Information Technology</h3>
+              <span className="education-school">RMIT University</span>
+              <span className="education-date">February 2023 – December 2023</span>
+              <p>Pathway to Bachelors of Computer Science, I completed:<br />
+              • Further Programming (Java)<br />
+              • Discrete Mathematics<br />
+              </p>
+            </div>
+            {/* Add more education items as needed */}
+            <div className="education-item">
+              <h3>Bachelors Of Computer Science</h3>
+              <span className="education-school">RMIT University</span>
+              <span className="education-date">February 2024 – December 2026</span>
+              <p>Building on the foundation in my Associates Degree, I completed:<br />
+              • Intro to C++<br />
+              • Practical Statistics<br />
+              • Operating Systems Principles<br />
+              • Practical Data Science<br />
+              </p>
+            </div>
+          </div>
+          <div className="certification-list">
+            <div className="certification-item">
+              <h3>Responsible Service Of Gambling (RSG)</h3>
+              <span className="certification-org"></span>
+              <span className="certification-date"></span>
+              <p>Certified to responsibly manage gambling activities in compliance with Australian laws.<br />
+                Trained in identifying problem gambling, ensuring a safe environment for patrons and staff.</p>
+            </div>
+            <div className="certification-item">
+              <h3>Responsible Service Of Alcohol (RSA)</h3>
+              <span className="certification-org"></span>
+              <span className="certification-date"></span>
+              <p>Certified to responsibly serve and manage the sale of alcohol in accordance with state laws.<br />
+                Trained in identifying intoxication, managing difficult situations,<br /> 
+                and ensuring a safe and compliant environment for patrons and staff.</p>
+            </div>
+            {/* Add more certification items as needed */}
+          </div>
+          <div className="certification-list">
+            <div className="certification-item">
+              <h3>Natoinal Police Check</h3>
+              <span className="certification-org"></span>
+              <span className="certification-date"></span>
+              Cleared Australian national police check, verifying a clean criminal record and suitability for roles requiring integrity, trust, and compliance with legal standards.
+            </div>
+            {/* Add more certification items as needed */}
+          </div>
+        </section>
+
+        <section id="contact" className="contact">
           <h2>Contact</h2>
           <ul>
             <li>
-              <a href="mailto:riidgyy@gmail.com">Email</a>
+              <a href="mailto:riidgyy@gmail.com">Email: riidgyy@gmail.com</a>
             </li>
             {/* Dynamically fetch LinkedIn profile */}
             {repos.length > 0 && (

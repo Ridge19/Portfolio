@@ -26,14 +26,79 @@ body {
   flex-direction: column;
   align-items: stretch;
   gap: 2rem;
+  .main-nav-bar.hamburger-menu {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 70vw;
+  max-width: 320px;
+  height: 100vh;
+  background: rgba(24, 24, 27, 0.98);
+  box-shadow: -2px 0 16px 0 rgba(31, 38, 135, 0.12);
+  z-index: 1000;
+  transition: right 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.5rem 1.5rem;
+  border-left: 1.5px solid #23272f;
+}
+  .main-nav-bar.hamburger-menu.open {
+    right: 0;
+  }
+
+  .main-nav-bar.hamburger-menu ul.nav-menu {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .main-nav-bar.hamburger-menu li {
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  .main-nav-bar.hamburger-menu li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  .main-nav-bar.hamburger-menu a {
+    color: #e5e7eb;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    transition: color 0.2s ease, transform 0.2s ease;
+    padding: 0.4rem 0;
+  }
+  .main-nav-bar.hamburger-menu a:hover {
+    color: #00bfff;
+    transform: translateX(4px);
+  }
+  .main-nav-bar.hamburger-menu a.active {
+    color: #7f5af0;
+    font-weight: 600;
+  }
 }
 
 
 /* Header */
 .header {
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  background: transparent;
+  border-radius: 1.2rem 1.2rem 0 0;
+  padding-top: 1.2rem;
+  padding-bottom: 0.5rem;
   position: relative;
 }
 
@@ -48,9 +113,41 @@ body {
   background-clip: text;
 }
 
+.site-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #00bfff 30%, #7f5af0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: left;
+  display: inline-block;
+  padding-left: 1.2rem;
+}
+
 .header p {
   font-size: 1.3rem;
   color: #a1a1aa;
+}
+
+@media (min-width: 700px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .site-title {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+  }
 }
 
 /* Hamburger menu styles */
@@ -332,6 +429,109 @@ ul li:before {
   margin-bottom: 0.5rem;
 }
 
+/* Education and Certification Section Styles */
+.education-certification {
+  margin-bottom: 3rem;
+}
+
+.education-list, .certification-list {
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.education-item, .certification-item {
+  background: rgba(36, 37, 46, 0.85);
+  border-radius: 0.8rem;
+  padding: 1.1rem 1.3rem;
+  box-shadow: 0 2px 8px 0 rgba(127, 90, 240, 0.08);
+  margin-bottom: 1.2rem;
+}
+
+.education-item h3, .certification-item h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.education-school, .certification-org {
+  display: block;
+  color: #00bfff;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.education-date, .certification-date {
+  display: block;
+  color: #a1a1aa;
+  font-size: 0.98rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Main Navigation Styles */
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav li {
+  display: inline-block;
+}
+
+.main-nav a {
+  color: #00bfff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.08rem;
+  padding: 0.4rem 1rem;
+  border-radius: 1.2rem;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.2px;
+}
+
+.main-nav a:hover, .main-nav a.active {
+  background: #23272f;
+  color: #7f5af0;
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  .site-title {
+    font-size: 1.5rem;
+    padding-left: 0.2rem;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: flex-start;
+  }
+  .main-nav {
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Smooth Scrolling for Anchor Links */
+html {
+  scroll-behavior: smooth;
+}
+
 @media (max-width: 600px) {
   .app-container {
     padding: 1rem 0.5rem;
@@ -411,6 +611,9 @@ ul li:before {
     padding: 0.8rem 0.7rem;
     margin-left: 1rem;
   }
+  .education-item, .certification-item {
+    padding: 0.8rem 0.7rem;
+  }
 }
 
 .projects-list-3x4 {
@@ -455,4 +658,19 @@ ul li:before {
   background: #0072b1;
   color: #fff;
   cursor: pointer;
+}
+
+.site-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #00bfff 30%, #7f5af0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: left;
+  display: block;
+  padding-left: 0;
 }

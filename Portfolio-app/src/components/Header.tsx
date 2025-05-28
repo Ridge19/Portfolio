@@ -19,6 +19,9 @@ const Header = () => {
           <li><a href="#about" style={{ color: '#00bfff', textDecoration: 'none' }}>About</a></li>
           <li><a href="#projects" style={{ color: '#00bfff', textDecoration: 'none' }}>Projects</a></li>
           <li><a href="#resume" style={{ color: '#00bfff', textDecoration: 'none' }}>Resume</a></li>
+          <li><a href="#work-experience" style={{ color: '#00bfff', textDecoration: 'none' }}>Work Experience</a></li>
+          <li><a href="#education-certification" style={{ color: '#00bfff', textDecoration: 'none' }}>Education / Certifications</a></li>
+          <li><a href="#contact" style={{ color: '#00bfff', textDecoration: 'none' }}>Contact</a></li>
         </ul>
       </nav>
     </header>
