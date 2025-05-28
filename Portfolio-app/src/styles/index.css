@@ -274,7 +274,64 @@ ul li:before {
   color: #fff;
 }
 
-/* Responsive Design */
+/* Work Experience Section Styles */
+.work-experience {
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 2rem 0 0 0.5rem;
+  padding-left: 2rem;
+  border-left: 3px solid #7f5af0;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -1.1rem;
+  top: 0.3rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #7f5af0;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #7f5af0;
+}
+
+.timeline-content {
+  background: rgba(36, 37, 46, 0.85);
+  border-radius: 0.8rem;
+  padding: 1.1rem 1.3rem;
+  box-shadow: 0 2px 8px 0 rgba(127, 90, 240, 0.08);
+  margin-left: 1.5rem;
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.timeline-company {
+  display: block;
+  color: #00bfff;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-date {
+  display: block;
+  color: #a1a1aa;
+  font-size: 0.98rem;
+  margin-bottom: 0.5rem;
+}
+
 @media (max-width: 600px) {
   .app-container {
     padding: 1rem 0.5rem;
@@ -344,6 +401,15 @@ ul li:before {
   .nav-menu li a.active {
     color: #7f5af0;
     font-weight: 600;
+  }
+
+  .timeline {
+    padding-left: 1rem;
+    margin-left: 0;
+  }
+  .timeline-content {
+    padding: 0.8rem 0.7rem;
+    margin-left: 1rem;
   }
 }
 
