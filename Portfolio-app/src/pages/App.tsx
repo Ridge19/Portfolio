@@ -7,6 +7,7 @@ function App() {
   const [repos, setRepos] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
     fetch('https://api.github.com/users/Ridge19/repos')
@@ -22,6 +23,14 @@ function App() {
         setError(err.message);
         setLoading(false);
       });
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -52,7 +61,7 @@ function App() {
           {loading && <p>Loading repositories...</p>}
           {error && <p style={{ color: 'red' }}>Error: {error}</p>}
           {!loading && !error && (
-            <div className="projects-list">
+            <div className="projects-list projects-list-3x4">
               {repos.map((repo) => (
                 <div className="project-card" key={repo.id}>
                   <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="project-title">
@@ -75,13 +84,61 @@ function App() {
           <h2>Contact</h2>
           <ul>
             <li><a href="mailto:your-email@example.com">Email</a></li>
-            <li><a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            {/* Dynamically fetch LinkedIn profile */}
+            {repos.length > 0 && (
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/ridge-tagala2002"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+                <button
+                  className="message-btn"
+                  onClick={() => window.open('https://www.linkedin.com/in/ridge-tagala2002/overlay/contact-info/', '_blank')}
+                >
+                  Message
+                </button>
+              </li>
+            )}
             <li><a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer">GitHub</a></li>
           </ul>
+        </section>
+
+        <section className="resume">
+          <h2>Resume</h2>
+          <p>You can view or download my resume below:</p>
+          <div className="resume-actions">
+            <a
+              href="/Ridge_Tagala_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-btn"
+            >
+              View Resume (PDF)
+            </a>
+            <a
+              href="/Ridge_Tagala_Resume.pdf"
+              download
+              className="resume-btn"
+            >
+              Download Resume
+            </a>
+          </div>
         </section>
       </main>
 
       <Footer />
+      {showBackToTop && (
+        <button
+          className="back-to-top"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Back to top"
+        >
+          ↑ Top
+        </button>
+      )}
     </div>
   );
 }
