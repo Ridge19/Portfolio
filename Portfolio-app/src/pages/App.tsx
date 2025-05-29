@@ -37,24 +37,55 @@ function App() {
     <div className="app-container">
       <Header />
       <main>
-        <section id="home" className="about">
-          <h2>About Me</h2>
-          <p>currently a work in progress...</p>
-          <p>coming soon.. :)</p>
-          <p>
-            I build responsive websites and web apps using React, TypeScript,
-            and modern technologies.
-          </p>
-        </section>
-
         <section id="about" className="about">
           <h2>About Me</h2>
-          <p>currently a work in progress...</p>
-          <p>coming soon.. :)</p>
-          <p>
-            I build responsive websites and web apps using React, TypeScript,
-            and modern technologies.
-          </p>
+          <div className="about-flex">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D5603AQHMMLpJ222aig/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1711705120313?e=1753920000&v=beta&t=W0Bc_aI9StcGEHQAN4gxXKhL3jt52jI1fkbXltfsiZc"
+              alt="Ridge Tagala portrait"
+              className="about-avatar"
+            />
+            <div className="about-content">
+              <p className="about-intro">
+                <span className="about-hi">Hi, I'm Ridge Tagala</span> — a{" "}
+                <span className="about-role">Full Stack Developer</span> and
+                Computer Science student based in Melbourne.
+              </p>
+              <ul className="about-list">
+                <li>
+                  💻 Full Stack Developer and{" "}
+                  <b>Computer Science student</b> based in Melbourne.
+                </li>
+                <li>
+                  🚀 Passionate about building{" "}
+                  <b>modern, user-focused web applications</b> with React,
+                  TypeScript, and Node.js.
+                </li>
+                <li>
+                  🏢 Currently interning at <b>BusinessLocal</b> and managing IT
+                  operations at <b>Lifestyle Markets Australia</b>.
+                </li>
+                <li>
+                  🤖 Exploring{" "}
+                  <b>cybersecurity, networking, and automation</b> through side
+                  projects and academic work.
+                </li>
+                <li>
+                  🤝 Thrive on <b>collaboration</b>, enjoy <b>mentoring peers</b>,
+                  and constantly learning new tech.
+                </li>
+                <li>
+                  🎮 Outside of coding: gaming, discovering new cafes ☕, and
+                  tinkering with gadgets.
+                </li>
+              </ul>
+              <p className="about-outro">
+                When I'm not coding, you'll find me gaming, exploring new cafes,
+                or tinkering with tech gadgets. Let's connect and build something
+                awesome! ✨
+              </p>
+            </div>
+          </div>
         </section>
 
         <section id="skills" className="skills">
@@ -128,11 +159,21 @@ function App() {
                 </span>
                 <span className="timeline-date">March 2025 – Present</span>
                 <p>
-                  • Supported management across 100+ daily operational tasks, enhancing team efficiency by 25%.<br />
-                  • Directed automation of internal office systems, reducing manual data entry time by 40%.<br />
-                  • Supervised 5 junior staff members, improving onboarding time by 30%.<br />
-                  • Maintained administrative records with 98% accuracy, enabling reliable performance tracking.<br />
-                  • Improved internal communication workflows, decreasing email response time by 20%.<br />
+                  • Supported management across 100+ daily operational tasks,
+                  enhancing team efficiency by 25%.
+                  <br />
+                  • Directed automation of internal office systems, reducing
+                  manual data entry time by 40%.
+                  <br />
+                  • Supervised 5 junior staff members, improving onboarding time
+                  by 30%.
+                  <br />
+                  • Maintained administrative records with 98% accuracy,
+                  enabling reliable performance tracking.
+                  <br />
+                  • Improved internal communication workflows, decreasing email
+                  response time by 20%.
+                  <br />
                 </p>
                 <div className="timeline-item">
                   <div className="timeline-dot" />
@@ -143,15 +184,30 @@ function App() {
                     </span>
                     <span className="timeline-date">November 2024</span>
                     <p>
-                    • Resolved 150+ technical support tickets per month with an average resolution time of under 2 hours.<br />
-                    • Achieved 98% end-user satisfaction in post-resolution surveys.<br />
-                    • Reduced recurring IT issues by 35% through documentation and root cause analysis.<br />
-                    • Contributed to a 20% reduction in hardware downtime by implementing preventive maintenance schedules.<br />
-                    • Onboarded and configured 30+ new employee workstations, ensuring readiness from day one.<br />
-                    • Deployed software updates and patches across 50+ systems with zero critical disruptions.<br />
-                    • Documented 20+ knowledge base articles to improve internal troubleshooting efficiency.<br />
-                    • Assisted in the migration of company data to cloud-based solutions, improving accessibility and backup integrity.
-                  </p>
+                      • Resolved 150+ technical support tickets per month with
+                      an average resolution time of under 2 hours.
+                      <br />
+                      • Achieved 98% end-user satisfaction in post-resolution
+                      surveys.
+                      <br />
+                      • Reduced recurring IT issues by 35% through documentation
+                      and root cause analysis.
+                      <br />
+                      • Contributed to a 20% reduction in hardware downtime by
+                      implementing preventive maintenance schedules.
+                      <br />
+                      • Onboarded and configured 30+ new employee workstations,
+                      ensuring readiness from day one.
+                      <br />
+                      • Deployed software updates and patches across 50+ systems
+                      with zero critical disruptions.
+                      <br />
+                      • Documented 20+ knowledge base articles to improve
+                      internal troubleshooting efficiency.
+                      <br />• Assisted in the migration of company data to
+                      cloud-based solutions, improving accessibility and backup
+                      integrity.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -236,28 +292,45 @@ function App() {
           </div>
         </section>
 
-        <section id="education-certification" className="education-certification">
+        <section
+          id="education-certification"
+          className="education-certification"
+        >
           <h2>Education & Certifications</h2>
           <div className="education-list">
             <div className="education-item">
               <h3>Associates Degree of Information Technology</h3>
               <span className="education-school">RMIT University</span>
-              <span className="education-date">February 2023 – December 2023</span>
-              <p>Pathway to Bachelors of Computer Science, I completed:<br />
-              • Further Programming (Java)<br />
-              • Discrete Mathematics<br />
+              <span className="education-date">
+                February 2023 – December 2023
+              </span>
+              <p>
+                Pathway to Bachelors of Computer Science, I completed:
+                <br />
+                • Further Programming (Java)
+                <br />
+                • Discrete Mathematics
+                <br />
               </p>
             </div>
             {/* Add more education items as needed */}
             <div className="education-item">
               <h3>Bachelors Of Computer Science</h3>
               <span className="education-school">RMIT University</span>
-              <span className="education-date">February 2024 – December 2026</span>
-              <p>Building on the foundation in my Associates Degree, I completed:<br />
-              • Intro to C++<br />
-              • Practical Statistics<br />
-              • Operating Systems Principles<br />
-              • Practical Data Science<br />
+              <span className="education-date">
+                February 2024 – December 2026
+              </span>
+              <p>
+                Building on the foundation in my Associates Degree, I completed:
+                <br />
+                • Intro to C++
+                <br />
+                • Practical Statistics
+                <br />
+                • Operating Systems Principles
+                <br />
+                • Practical Data Science
+                <br />
               </p>
             </div>
           </div>
@@ -266,16 +339,28 @@ function App() {
               <h3>Responsible Service Of Gambling (RSG)</h3>
               <span className="certification-org"></span>
               <span className="certification-date"></span>
-              <p>Certified to responsibly manage gambling activities in compliance with Australian laws.<br />
-                Trained in identifying problem gambling, ensuring a safe environment for patrons and staff.</p>
+              <p>
+                Certified to responsibly manage gambling activities in
+                compliance with Australian laws.
+                <br />
+                Trained in identifying problem gambling, ensuring a safe
+                environment for patrons and staff.
+              </p>
             </div>
             <div className="certification-item">
               <h3>Responsible Service Of Alcohol (RSA)</h3>
               <span className="certification-org"></span>
               <span className="certification-date"></span>
-              <p>Certified to responsibly serve and manage the sale of alcohol in accordance with state laws.<br />
-                Trained in identifying intoxication, managing difficult situations,<br /> 
-                and ensuring a safe and compliant environment for patrons and staff.</p>
+              <p>
+                Certified to responsibly serve and manage the sale of alcohol in
+                accordance with state laws.
+                <br />
+                Trained in identifying intoxication, managing difficult
+                situations,
+                <br />
+                and ensuring a safe and compliant environment for patrons and
+                staff.
+              </p>
             </div>
             {/* Add more certification items as needed */}
           </div>
@@ -284,7 +369,9 @@ function App() {
               <h3>Natoinal Police Check</h3>
               <span className="certification-org"></span>
               <span className="certification-date"></span>
-              Cleared Australian national police check, verifying a clean criminal record and suitability for roles requiring integrity, trust, and compliance with legal standards.
+              Cleared Australian national police check, verifying a clean
+              criminal record and suitability for roles requiring integrity,
+              trust, and compliance with legal standards.
             </div>
             {/* Add more certification items as needed */}
           </div>
